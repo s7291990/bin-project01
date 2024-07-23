@@ -1,11 +1,6 @@
+var zoom = 1;
+var isFirst = true;
 
-var TOUCH = "ontouchstart" in window;
-var tevent = '';
-if (TOUCH){
-    tevent = "touchstart";
-}else{
-    tevent = "click";
-}
 $(function(){
 
 
