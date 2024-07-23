@@ -34,3 +34,8 @@ body{
     overflow:hidden;
     position:relative;
 }
+
+/*표준모드*/
+.mv-header-wrap{}
+.mv-header-wrap button{}
+.mv-desc-wrap{}
