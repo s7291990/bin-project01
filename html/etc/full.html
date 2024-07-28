@@ -25,11 +25,11 @@
 
   <div class="container">
 
-    <div class="contents">
+    <div class="contents full">
 
       <!-- 상단 영상 타이틀&설명 -->
       <section class="mv-header-wrap">
-        <div class="mpic"><img src="../../asset/image/etc/etc-top-left.png" /></div>
+        <div class="mpic"><img src="../../asset/image/etc/etc-top-left01.png" /></div>
 
         <div class="mv-book-title"><!--  chatType -->
           <button type="button" class="btn-prev"><img src="../../asset/image/btn/btn-prev.png" /></button>
@@ -67,12 +67,20 @@
         <button type="button" class="btn-book">
           <img src="../../asset/image/btn/btn-book.png" />
         </button>
+        <div class="func-item-wrap">
+          <button type="button">
+            <img src="../../asset/image/btn/btn-func-list01.png" />
+          </button>
+          <button type="button">
+            <img src="../../asset/image/btn/btn-func-list02.png" />
+          </button>
+          <button type="button">
+            <img src="../../asset/image/btn/btn-func-list03.png" />
+          </button>
+        </div>
       </section>
 
-      <!-- 다음 영상
-        <div class="movie-list-wrap">
-        <div class="movie-list-wrap on">
-      -->
+      <!-- 다음 영상 -->
       <div class="movie-list-wrap on">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
@@ -135,35 +143,23 @@
             </li>
           </ul>
         </div>
-        <div class="quick-sub-wrap">
-          <button type="button" class="btn-up"><img src="../../asset/image/btn/btn-up.png" /></button>
-          <ul>
-            <li>
-              <button type="button">
-                <img src="../../asset/image/btn/btn-quick-sub-list01.png" />
-              </button>
-            </li>
-            <li>
-              <button type="button">
-                <img src="../../asset/image/btn/btn-quick-sub-list02.png" />
-              </button>
-            </li>
-            <li>
-              <button type="button">
-                <img src="../../asset/image/btn/btn-quick-sub-list03.png" />
-              </button>
-            </li>
-          </ul>
-          <button type="button" class="btn-down"><img src="../../asset/image/btn/btn-down.png" /></button>
-        </div>
       </section>
 
       <!-- 영상 영역 -->
       <section class="mv-cont-wrap">
         <div class="mv-video-wrap"></div>
+
+        <!--
+        mv-control-wrap : normal
+        mv-control-wrap.red : red
+        mv-control-wrap.orange : orange
+        mv-control-wrap.yellow : yellow
+        mv-control-wrap.green : green
+        mv-control-wrap.blue : blue
+        -->
         <div class="mv-control-wrap">
           <button type="button" class="btn-play">
-            <img src="../../asset/image/btn/btn-play.png" />
+            <img src="../../asset/image/btn/btn-play-full.png" />
             <span>재생하기</span>
           </button>
           <div class="slider">
@@ -177,6 +173,39 @@
               max: 10
             });
           </script>
+
+          <div class="moniter-item-wrap">
+            <img src="../../asset/image/etc/etc-moniter01.png" />
+          </div>
+          <div class="color-change-wrap">
+            <button type="button" class="on">
+              <img src="../../asset/image/btn/btn-color-list01-on.png" />
+            </button>
+            <button type="button">
+              <img src="../../asset/image/btn/btn-color-list02.png" />
+            </button>
+            <button type="button">
+              <img src="../../asset/image/btn/btn-color-list03.png" />
+            </button>
+            <button type="button">
+              <img src="../../asset/image/btn/btn-color-list04.png" />
+            </button>
+            <button type="button">
+              <img src="../../asset/image/btn/btn-color-list05.png" />
+            </button>
+          </div>
+
+
+          <button type="button" class="btn-sound">
+            <img src="../../asset/image/btn/btn-sound-full.png" />
+            <span>음량조절</span>
+          </button>
+
+          <div class="option-item-wrap">
+            <button type="button">표준보기</button>
+            <button type="button">글보이기</button>
+          </div>
+
           <div class="sound-option">
             <!--
             <div class="sound-status"></div>
@@ -197,18 +226,19 @@
               <div class="sound-slider">
                 <div id="range02"></div>
               </div>
-              <script>
-                $("#range02").asRange({
-                  tip: false,
-                  step: 4,
-                  range: false,
-                  min: 0,
-                  max: 8
-                });
-              </script>
               <button type="button">
                 <img src="../../asset/image/btn/btn-plus.png" />
               </button>
+
+              <script>
+                $("#range02").asRange({
+                  tip: false,
+                  step: 0,
+                  range: false,
+                  min: 0,
+                  max: 11
+                });
+              </script>
             </div>
 
           </div>
