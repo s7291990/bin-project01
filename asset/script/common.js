@@ -7,16 +7,20 @@ $(function () {
     var ck = $(this).hasClass("on");
     if (ck) {
       $(this).removeClass("on");
+      $(this).find("span").text("재생하기");
     } else {
       $(this).addClass("on");
+      $(this).find("span").text("정지하기");
     }
   })
   $("body").on("click", ".mv-control-wrap .btn-sound", function () {
     var ck = $(this).hasClass("on");
     if (ck) {
       $(this).removeClass("on");
+      $(this).find("span").text("음량조절");
     } else {
       $(this).addClass("on");
+      $(this).find("span").text("음소거");
     }
   })
   $("body").on("click", ".btn-chat", function () {
