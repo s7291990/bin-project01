@@ -143,12 +143,33 @@
               </button>
             </li>
             <li>
-              <button type="button">
+              <button type="button" class="btn-item">
                 <img src="../../asset/image/btn/btn-quick-list03.png" />
                 <span>아이템</span>
               </button>
             </li>
           </ul>
+        </div>
+        <div class="quick-sub-wrap">
+          <button type="button" class="btn-up"><img src="../../asset/image/btn/btn-up.png" /></button>
+          <ul>
+            <li>
+              <button type="button">
+                <img src="../../asset/image/btn/btn-quick-sub-list01.png" />
+              </button>
+            </li>
+            <li>
+              <button type="button">
+                <img src="../../asset/image/btn/btn-quick-sub-list02.png" />
+              </button>
+            </li>
+            <li>
+              <button type="button">
+                <img src="../../asset/image/btn/btn-quick-sub-list03.png" />
+              </button>
+            </li>
+          </ul>
+          <button type="button" class="btn-down"><img src="../../asset/image/btn/btn-down.png" /></button>
         </div>
       </section>
 
@@ -185,19 +206,19 @@
             <img src="../../asset/image/etc/etc-moniter01.png" />
           </div>
           <div class="color-change-wrap">
-            <button type="button" class="on">
-              <img src="../../asset/image/btn/btn-color-list01-on.png" />
+            <button type="button" class="b01" data-color="red">
+              <img src="../../asset/image/btn/btn-color-list01.png" />
             </button>
-            <button type="button">
+            <button type="button" class="b02" data-color="orange">
               <img src="../../asset/image/btn/btn-color-list02.png" />
             </button>
-            <button type="button">
+            <button type="button" class="b03" data-color="yellow">
               <img src="../../asset/image/btn/btn-color-list03.png" />
             </button>
-            <button type="button">
+            <button type="button" class="b04" data-color="green">
               <img src="../../asset/image/btn/btn-color-list04.png" />
             </button>
-            <button type="button">
+            <button type="button" class="b05" data-color="blue">
               <img src="../../asset/image/btn/btn-color-list05.png" />
             </button>
           </div>
@@ -209,7 +230,7 @@
           </button>
 
           <div class="option-item-wrap">
-            <button type="button">표준보기</button>
+            <button type="button" class="btn-screen-change">표준보기</button>
             <button type="button">글보이기</button>
           </div>
 
@@ -239,11 +260,15 @@
 
               <script>
                 $("#range02").asRange({
+                  value: 4,
                   tip: false,
                   step: 0,
                   range: false,
                   min: 0,
-                  max: 11
+                  max: 11,
+                  format(value) {
+                    return value;
+                  }
                 });
               </script>
             </div>

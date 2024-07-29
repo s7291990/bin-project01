@@ -304,7 +304,7 @@ background:transparent;overflow:hidden;display: flex;
     width:12px;
 }
 .sound-bar .sound-slider{
-    width:30px;
+    width:35px;
     transform: translateY(5px) translateX(-2px);
 }
 .sound-bar .asRange{width:100%;
@@ -393,12 +393,15 @@ background:transparent;overflow:hidden;display: flex;
     left:12px;margin-top:0px;
     width:61px;height:251px;overflow:Hidden;
     background:url(../image/bg/bg-quick-sub.png) no-repeat center top;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;flex-direction: column;
     box-sizing: border-box;
     gap:10px;
     padding-top:10px;
+}
+.quick-sub-wrap.on{
+    display:flex;
 }
 .quick-sub-wrap .btn-up{width:24px;height:24px;overflow:Hidden;
     padding:0;border:0;background:transparent;
@@ -499,7 +502,7 @@ background:transparent;overflow:hidden;display: flex;
     background: url(../image/btn/btn-pause-full.png) no-repeat;
     background-size: cover;
 }
-
+.btn-sound{display:none;}
 .full .mv-control-wrap .btn-sound{
     width:128px;height:82px;border:0;padding:0;background:transparent;
     margin:0;
@@ -581,7 +584,7 @@ background:transparent;overflow:hidden;display: flex;
     background-size: cover;
 }
 .full .sound-option .sound-status.v11:before{
-    background: url(../image/bg/bg-sound-status-full-value01.png) no-repeat center top;
+    background: url(../image/bg/bg-sound-status-full-value11.png) no-repeat center top;
     background-size: cover;
 }
 .full .sound-bar{
@@ -591,7 +594,7 @@ background:transparent;overflow:hidden;display: flex;
     background-size: cover;
 }
 .full .sound-bar .sound-slider{
-    width:60px;
+    width:65px;margin-left:-3px;
 }
 .full .sound-bar button{
     transform: translateX(3px);
@@ -600,6 +603,9 @@ background:transparent;overflow:hidden;display: flex;
     transform: translateX(-3px);
 }
 .option-item-wrap{
+    display:none;
+}
+.full .option-item-wrap{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -619,7 +625,7 @@ background:transparent;overflow:hidden;display: flex;
 .func-item-wrap{
     width:60px;height:auto;padding:20px 0;border-radius:21px;
     background:rgba(0,0,0,.5);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -627,6 +633,9 @@ background:transparent;overflow:hidden;display: flex;
     right: 28px;
     top: 75px;
     gap:10px;
+}
+.btn-book.on + .func-item-wrap{
+    display: flex;
 }
 .func-item-wrap button{
     width:60px;height:auto;border:0;padding:0;
@@ -656,6 +665,10 @@ background:transparent;overflow:hidden;display: flex;
     background:#340366;
 }
 .moniter-item-wrap{
+    display:none;
+}
+.full .moniter-item-wrap{
+    display:block;
     width:270px;height:110px;box-sizing: border-box;
     border-radius:12px;border:1px solid #575d71;background:#c7d3e0;
     padding:5px;
@@ -670,6 +683,9 @@ background:transparent;overflow:hidden;display: flex;
     object-fit: cover;
 }
 .color-change-wrap{
+    display:none;
+}
+.full .color-change-wrap{
     position:absolute;left: 668px;
     top: 72px;
     width:41px;height:auto;overflow:hidden;
@@ -683,6 +699,31 @@ background:transparent;overflow:hidden;display: flex;
     width:41px;height:16px;overflow:hidden;border:0;
     background:transparent;position:relative;padding:0;
 }
+.color-change-wrap button.on:before{
+    content:"";position:absolute;left:0;top:0;
+    width:41px;height:14px;overflow:hidden;display:block;
+}
+.color-change-wrap button.b01.on:before{
+    background:url(../image/btn/btn-color-list01-on.png) no-repeat;
+    background-size:cover;
+}
+.color-change-wrap button.b02.on:before{
+    background:url(../image/btn/btn-color-list02-on.png) no-repeat;
+    background-size:cover;
+}
+.color-change-wrap button.b03.on:before{
+    background:url(../image/btn/btn-color-list03-on.png) no-repeat;
+    background-size:cover;
+}
+.color-change-wrap button.b04.on:before{
+    background:url(../image/btn/btn-color-list04-on.png) no-repeat;
+    background-size:cover;
+}
+.color-change-wrap button.b05.on:before{
+    background:url(../image/btn/btn-color-list05-on.png) no-repeat;
+    background-size:cover;
+}
+
 .movie-list-wrap{
     position:absolute;left:50%;top:48px;
     width:400px;z-index:30;
@@ -702,4 +743,21 @@ background:transparent;overflow:hidden;display: flex;
 .movie-list-wrap .swiper-slide img{
     width:150px;height:90px;
     object-fit: cover;
+}
+.full .quick-sub-wrap{
+    width:251px;height:61px;background:rgba(255,255,255,.5);
+    border-radius:32px;    left: 250px;
+    top: 4px;    flex-direction: row;
+}
+.full .quick-sub-wrap ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:150px
+}
+.full .quick-sub-wrap .btn-up{
+    transform:rotate(-90deg);
+}
+.full .quick-sub-wrap .btn-down{
+    transform:rotate(-90deg);
 }
